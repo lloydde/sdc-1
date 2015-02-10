@@ -121,60 +121,59 @@ the last step in configuration allows editing the resulting configuration file.
 
 CoaL will now install based on the configuration parameters entered
 above. Installation has been observed to take up to 20 minutes,
-particularly if slow laptop HDD.
+particularly if installing on a laptop hard disk drive.
 
 ### Screenshots
 
-- CoaL Grub Boot Menu:
+CoaL Grub Boot Menu:
 
 ![CoaL Grub Boot Menu](../img/coal-grub-menu.png)
 
-- If while booting it stays just showing a cursor then you might have forgotten
+If while booting it stays just showing a cursor then you might have forgotten
 to redirect the console (see above):
 
 ![kvm warning on boot](../img/coal-only-cursor.png)
 
-- On boot, being in a virtual environment, you'll receive CPU and KVM warnings:
+On boot, being in a virtual environment, you'll receive CPU and KVM warnings:
 
 ![kvm warning on boot](../img/coal-boot-warnings.png)
 
-- Verify configuration:
+Verify configuration:
 
 ![Configuration displayed on console for verification.](../img/coal-verify-configuration.png)
 
-- On a Mac, you will be prompted to enter your admin password, so that the
+On a Mac, you will be prompted to enter your admin password, so that the
 VM can monitor all network traffic. You may receive this popup a few times:
 
 ![Mac system dialog confirming VM can monitor all network traffic.](../img/coal-mac-vm-monitor-all-network-traffic.png)
 
-- The next phase of installation completes with notification of a reboot:
+The next phase of installation completes with notification of a reboot:
 
 ![Reboot message shown on console.](../img/coal-will-reboot.png)
 
-- The final phase of installation, setup, is the longest and does not show
-the progress at the beginning of it. You may see either:
-
-A)
+The final phase of installation, setup, is the longest and does not show
+the progress at the beginning of it. You may see either just a cursor on
+the login page or a login prompt:
 
 !["Welcome to SDC7!" message on console.](../img/coal-welcome-sdc7.png)
 
-B)
+or
 
 ![Login prompt on console.](../img/coal-headnode-login-prompt.png)
 
-- After sometime you will see, preparing for setup:
+After sometime you will see "preparing for setup":
 
 !["preparing for setup..." on console.](../img/coal-preparing-for-setup.png)
 
-- Finally, when setup is complete you'll see:
+Finally, you'll see "Setup complete":
 
 !["Setup complete on console."](../img/coal-setup-complete.png)
 
 
 ## Post Installation
 
-After setup is complete you should be able to SSH into your CoaL on the
-"admin" network. Example:
+After setup is complete you should be able to ssh into your CoaL
+using the admin network headnode IP address you configured. Example:
 
 ```bash
 ssh root@10.99.99.7  # password 'rootpass'
