@@ -39,7 +39,7 @@ At a high level the CoaL setup procedure is:
     - Mac example:
 
         ```bash
-        $ tar -zxvf coal-latest.tgz -C ~/Documents/Virtual\ Machines.localized 
+        $ tar -zxvf coal-latest.tgz -C ~/Documents/Virtual\ Machines.localized
         x root.password.20140911t161518z
         x coal-master-20140911T194415Z-g1a445f5-4gb.vmwarevm/
         x coal-master-20140911T194415Z-g1a445f5-4gb.vmwarevm/USB-headnode.vmx
@@ -69,7 +69,7 @@ At a high level the CoaL setup procedure is:
 
             grub> variable os_console vga
 
-  1. Press enter.  
+  1. Press enter.
 
   1. Press esc to get back to the GRUB menu.
 
@@ -87,10 +87,10 @@ the last step in configuration allows editing the resulting configuration file.
 |Setting|Value|Notes|
 |---|---|---|
 |*Instructions*|↵||
-|Company Name|Clavius|*Can substitute with your choice.*|
-|Region of Datacenter|orbit|*Can substitute with your choice.*|
-|Name of Datacenter|coal-1|(Availability zone.) *Can substitute with your choice.* |
-|Location of DataCenter|Moon, Earth|*Can substitute with your choice.*|
+|Company Name|Clavius||
+|Region of Datacenter|orbit||
+|Name of Datacenter|coal-1|(Availability zone.) |
+|Location of DataCenter|Moon, Earth||
 |*Instructions*|↵||
 |'admin' interface|2|The second NIC is set up as the admin network by the CoaL networking script|
 |(admin) headnode IP address|10.99.99.7|Must use this value.|
@@ -107,18 +107,18 @@ the last step in configuration allows editing the resulting configuration file.
 |Default gateway IP address:|↵|Use the default.|
 |Primary DNS Server|↵|Use the default.|
 |Secondary DNS Server|↵|Use the default.|
-|Head node domain name|example.com|*Can substitute with your choice.*|
-|DNS Search Domain|example.com|*Can substitute with your choice.*|
+|Head node domain name|example.com||
+|DNS Search Domain|example.com||
 |NTP Server IP Address|↵|Use the default.|
-|"root" password|rootpass|*Can substitute with your choice.*|
+|"root" password|rootpass||
 |Confirm "root" password|||
-|"admin" password|adminpass1|*Can substitute with your choice.*|
+|"admin" password|adminpass1||
 |Confirm "admin" password|||
 |Administrator's email|↵|Use the default.|
 |Support email|↵|Use the default.|
 |Confirm password|||
-|Enable telemetry|"true" or "false"|*Can use your choice*|
-|Verify Configuration||See screenshot below.|
+|Enable telemetry|↵|Defaults to false.|
+|Verify Configuration||Review the configuration before proceeding.|
 |Verify Configuration Again|||
 
 
