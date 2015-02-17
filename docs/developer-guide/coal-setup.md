@@ -52,28 +52,45 @@ At a high level the CoaL setup procedure is:
 
 1. Start VMware and load the appliance.
 
-    - Mac example: 'open'ing the folder will start VMware and "open and run" the vm:
+    - Mac example: 'open'ing the folder will start VMware and
+      "open and run" the vm:
 
         ```bash
-        cd ~/Documents/Virtual\ Machines.localized
-        open coal-<branch>-<build_date_time>-<git_sha1_hash>-4gb.vmwarevm
+        $ cd ~/Documents/Virtual\ Machines.localized
+        $ open coal-<branch>-<build_date_time>-<git_sha1_hash>-4gb.vmwarevm
         ```
 
-1. When you are prompted with the GRUB menu press the "down" arrow.
+1. When you are prompted with the GRUB menu press the down arrow.
 
   1. Select the "Live 64-bit" option and press 'c' to enter the command
      line for GRUB.
 
-     By default, the OS will redirect the console to ttyb which is fine
-     for production but needs to be changed for CoaL. While in the command line:
+     ![CoaL Grub Boot Menu](../img/coal-grub-menu.png)
 
-            grub> variable os_console vga
+     By default, the OS will redirect the console to ttyb which is fine
+     for production but needs to be changed for CoaL. At the command line enter
+     "variable os_console vga":
+
+        ```
+        grub> variable os_console vga
+        ```
 
   1. Press enter.
 
   1. Press esc to get back to the GRUB menu.
 
   1. Boot "Live 64-bit" by pressing enter.
+
+     If while booting it stays just showing a cursor then you might have
+     forgotten to redirect the console (see above):
+
+     ![kvm warning on boot](../img/coal-only-cursor.png)
+
+     On boot, being in a virtual environment without Intel VT-x support
+     enabled, you'll receive cpu and kvm warnings:
+
+     ![kvm warning on boot](../img/coal-boot-warnings.png)
+
 
 ### Configure the Headnode
 
@@ -121,31 +138,16 @@ the last step in configuration allows editing the resulting configuration file.
 |Verify Configuration||Review the configuration before proceeding.|
 |Verify Configuration Again|||
 
+Verify configuration:
+
+![Configuration displayed on console for verification.](../img/coal-verify-configuration.png)
+
 
 ## Installation
 
 CoaL will now install based on the configuration parameters entered
 above. Installation has been observed to take up to 20 minutes,
 particularly if installing on a laptop hard disk drive.
-
-### Screenshots
-
-CoaL Grub Boot Menu:
-
-![CoaL Grub Boot Menu](../img/coal-grub-menu.png)
-
-If while booting it stays just showing a cursor then you might have forgotten
-to redirect the console (see above):
-
-![kvm warning on boot](../img/coal-only-cursor.png)
-
-On boot, being in a virtual environment, you'll receive CPU and KVM warnings:
-
-![kvm warning on boot](../img/coal-boot-warnings.png)
-
-Verify configuration:
-
-![Configuration displayed on console for verification.](../img/coal-verify-configuration.png)
 
 On a Mac, you will be prompted to enter your admin password, so that the
 VM can monitor all network traffic. You may receive this popup a few times:
