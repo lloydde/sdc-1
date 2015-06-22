@@ -729,6 +729,30 @@ the most reliable and secure OS.
 
    You have successfully updated CoaL.
 
-## Additional Operations
+# Add Virtual Compute Node
+
+You likely used `sdcadm post-setup dev-headnode-prov`, so that
+CloudAPI provisioning is possible in your CoaL environment.
+
+You're also going to want to have one or more virtual compute nodes.
+This allows you to get a small taste of some of the features of the
+Designation API (DAPI).
+
+1. Download and extract the image:
+
+    ```bash
+    $ curl -C - -O https://raw.githubusercontent.com/joyent/sdc-headnode/master/coal/coal-computenode.vmwarevm.tbz2
+    $ tar -zxvf coal-computenode.vmwarevm.tbz2 -C  ~/Documents/Virtual\ Machines.localized
+    x coal-computenode.vmwarevm/
+    x coal-computenode.vmwarevm/netboot.vmsd
+    x coal-computenode.vmwarevm/netboot.vmx
+    x coal-computenode.vmwarevm/netboot.vmxf
+    x coal-computenode.vmwarevm/Virtual Disk.vmdk
+    ```
+
+1. 
+
+
+# Additional Operations
 
 See [the Joyent customer documentation](https://docs.joyent.com/sdc7).
